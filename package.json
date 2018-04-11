@@ -1,6 +1,6 @@
 {
   "name": "library-admin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Vue.js project",
   "author": "mumair <mumairofficial@gmail.com>",
   "private": true,
@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js",
     "commit": "git-cz && git push -u origin master",
-    "git-release": "standard-version && git push  — follow-tags origin master && npm publish"
+    "git-release": "standard-version && git push --follow-tags origin master && npm publish"
   },
   "dependencies": {
     "element-ui": "^2.3.3",
