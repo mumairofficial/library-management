@@ -7,6 +7,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 
+<a name="0.1.1"></a>
+## [0.1.1](https://github.com/mumairofficial/library-management/compare/v0.1.2...v0.1.1) (2018-04-13)
+
+
+
 <a name="0.1.2"></a>
 ## [0.1.2](https://github.com/mumairofficial/library-management/compare/v0.1.1...v0.1.2) (2018-04-11)
 
