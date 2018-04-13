@@ -1,11 +1,18 @@
 <template>
   <v-navigation-drawer
-      fixed
-      :clipped="$vuetify.breakpoint.lgAndUp"
+      permanent
       app
       v-model="drawer"
       width="240">
-      <v-list>
+      <v-list class="p-t-0">
+        <v-list-tile dark class="teal darken-3 branding">
+          <v-list-tile-content class="mt-14">
+            <v-toolbar-title class="ml-0 title">
+              <span class="hidden-sm-and-down">Library</span>
+            </v-toolbar-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        
         <template v-for="item in menuItems">
           <v-layout
             row
@@ -60,6 +67,21 @@
       </v-list>
     </v-navigation-drawer>
 </template>
+
+<style>
+.p-t-0 {
+  padding-top: 0 !important;
+}
+.mt-14 {
+  margin-top: 14px;
+}
+.branding {
+  color: white;
+  height: 64px !important;
+  margin-bottom: 20px;
+}
+</style>
+
 
 <script>
 export default {

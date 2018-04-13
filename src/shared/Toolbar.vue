@@ -1,10 +1,10 @@
 <template>
-  <v-toolbar color="white" flat light app :clipped-left="$vuetify.breakpoint.lgAndUp" fixed>
+  <v-toolbar color="white" flat light app fixed>
       
-      <v-toolbar-title style="width: 300px" class="ml-0 pl-3 title">
-        <!-- <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon> -->
+      <!-- <v-toolbar-title style="width: 300px" class="ml-0 pl-3 title">
+        <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
         <span class="hidden-sm-and-down">Library</span>
-      </v-toolbar-title>
+      </v-toolbar-title> -->
 
       <v-spacer></v-spacer>
       
