@@ -1,37 +1,33 @@
 <template>
   <v-app id="inspire">
-    
+
     <navigation-drawer></navigation-drawer>
-    
+
     <toolbar></toolbar>
 
     <v-content>
-      <v-container fluid>
-        <router-view/>
-      </v-container>
+      <router-view/>
     </v-content>
   </v-app>
 </template>
 
 <style>
-
 </style>
 
-
 <script>
-import NavigationDrawer from './shared/NavigationDrawer';
-import Toolbar from './shared/Toolbar';
+import NavigationDrawer from './shared/NavigationDrawer'
+import Toolbar from './shared/Toolbar'
 
 export default {
   components: {
     'navigation-drawer': NavigationDrawer,
-    'toolbar': Toolbar
+    toolbar: Toolbar
   },
   data: () => ({
-    drawer: null,
+    drawer: null
   }),
   props: {
     source: String
   }
-};
+}
 </script>
