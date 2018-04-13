@@ -2,7 +2,7 @@
   <v-toolbar color="white" flat light app fixed>
 
       <v-spacer></v-spacer>
-      
+
       <v-btn icon class="m-0">
         <v-icon>notifications</v-icon>
       </v-btn>
@@ -39,9 +39,9 @@
               <v-list-tile-sub-title>hello@john.com</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
-        
+
           <v-divider></v-divider>
-          
+
           <v-list-tile @click="" ripple>
             <v-list-tile-action>
               <v-icon color="gray">exit_to_app</v-icon>
@@ -72,7 +72,6 @@
 }
 </style>
 
-
 <script>
 export default {
   name: 'Toolbar',
@@ -84,6 +83,5 @@ export default {
       { title: 'Help' }
     ]
   })
-};
+}
 </script>
-
