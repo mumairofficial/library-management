@@ -14,8 +14,8 @@ import App from './App'
 Vue.config.productionTip = false
 Vue.use(Vuetify, {
   theme: {
-    primary: colors.red.darken1, // #E53935
-    secondary: colors.red.lighten4, // #FFCDD2
+    primary: colors.teal.accent3, // #E53935
+    secondary: colors.teal.lighten4, // #FFCDD2
     accent: colors.indigo.base // #3F51B5
   }
 });
