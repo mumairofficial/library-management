@@ -20,19 +20,29 @@
         :key="item.title"
         :prepend-icon="item.action"
         no-action>
-        <v-list-tile slot="activator">
-          <v-list-tile-content>
+
+        <template v-if="item.items.length === 0">
+          <v-list-tile-content ripple @click="">
             <v-list-tile-title>{{ item.title }}</v-list-tile-title>
           </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile v-for="subItem in item.items" :key="subItem.title" @click="">
-          <v-list-tile-content>
-            <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
-          </v-list-tile-content>
-          <v-list-tile-action>
-            <v-icon>{{ subItem.action }}</v-icon>
-          </v-list-tile-action>
-        </v-list-tile>
+        </template>
+
+        <template valid-v-if="item.items.length > 2">
+          <v-list-tile slot="activator">
+            <v-list-tile-content>
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+          <v-list-tile v-for="subItem in item.items" :key="subItem.title" ripple @click="">
+            <v-list-tile-content>
+              <v-list-tile-title>{{ subItem.title }}</v-list-tile-title>
+            </v-list-tile-content>
+            <v-list-tile-action>
+              <v-icon>{{ subItem.action }}</v-icon>
+            </v-list-tile-action>
+          </v-list-tile>
+        </template>
+
       </v-list-group>
     </v-list>
     </v-navigation-drawer>
@@ -60,23 +70,44 @@ export default {
     menuItems: [
       {
         action: 'home',
-        title: 'HOME'
+        title: 'HOME',
+        active: true,
+        items: [{ title: 'Analytics' }, { title: 'Notifications' }]
+      },
+      {
+        action: 'shopping_cart',
+        title: 'SALES',
+        items: [
+          { title: 'New Invoice' },
+          { title: 'Manager Invoices' },
+          { title: 'Register' },
+          { title: 'Sale Returns' },
+          { title: 'Recovery' }
+        ]
+      },
+      {
+        action: 'store',
+        title: 'PURCHASE',
+        items: [
+          { title: 'New Purchase' },
+          { title: 'Manager' }
+        ]
       },
       {
         action: 'supervisor_account',
-        title: 'MANAGE USERS',
-        active: true,
+        title: 'EMPLOYEES',
         items: [
-          { title: 'Breakfast & brunch' },
-          { title: 'New American' },
-          { title: 'Sushi' }
+          { title: 'Add New' },
+          { title: 'Manage Existing' }
         ]
       },
       {
         action: 'settings',
         title: 'SETTINGS',
         items: [
-          { title: 'List Item' }
+          { title: 'Stock' },
+          { title: 'Brands' },
+          { title: 'Reports' }
         ]
       }
     ]
