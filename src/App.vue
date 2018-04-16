@@ -1,33 +1,20 @@
 <template>
-  <v-app id="inspire">
-
-    <navigation-drawer></navigation-drawer>
-
-    <toolbar></toolbar>
-
-    <v-content>
-      <router-view/>
-    </v-content>
-  </v-app>
+    <component :is="component">
+        <slot />
+    </component>
 </template>
 
-<style>
-</style>
-
 <script>
-import NavigationDrawer from './shared/NavigationDrawer'
-import Toolbar from './shared/Toolbar'
-
+import VuebaseLayout from './layouts/VuebaseLayout';
 export default {
+  name: 'App',
   components: {
-    'navigation-drawer': NavigationDrawer,
-    toolbar: Toolbar
+    VuebaseLayout
   },
-  data: () => ({
-    drawer: null
-  }),
-  props: {
-    source: String
+  computed: {
+    component() {
+      return VuebaseLayout;
+    }
   }
 }
 </script>
